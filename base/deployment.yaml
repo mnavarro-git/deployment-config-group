@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-flaskapp
+  namespace: flaskapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-flaskapp
+  template:
+    metadata:
+      labels:
+        app: python-flaskapp
+    spec:
+      containers:
+      - name: python-flaskapp
+        image: mnavarrodocker/python-flaskapp:2594eba
+        ports:
+        - containerPort: 5000
