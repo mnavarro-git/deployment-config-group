@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: python-flaskapp
-        image: mnavarrodocker/python-flaskapp-group:365528c
+        image: mnavarrodocker/python-flaskapp-group:832d4e0
         ports:
         - containerPort: 5000
